@@ -1,0 +1,84 @@
+.notes-app {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .notes-app .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1.5em;
+    border-right: 1px solid #ccc;
+  }
+  
+  /* Style for add button */
+  .notes-app .sidebar .add-note-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  /* Color list container */
+  .notes-app .sidebar .colors-input-list {
+    margin-top: 1.5em;
+    margin-left: 0.5em;
+  }
+  
+  /* Color list items */
+  .notes-app .sidebar .colors-input-list > div {
+    margin: 5px 0px;
+  }
+  
+  /* Hide radio inputs */
+  .notes-app .sidebar .colors-input-list input {
+    display: none;
+  }
+  
+  /* Style color labels */
+  .notes-app .sidebar .colors-input-list label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Border for unselected color inputs */
+  .notes-app .sidebar .colors-input-list input + label {
+    border: 2px solid #555;
+  }
+  
+  /* 🔄 Responsive Layout for Mobile */
+  @media (max-width: 768px) {
+    .notes-app {
+      flex-direction: column;
+    }
+  
+    .notes-app .sidebar {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+      padding: 1em;
+    }
+  
+    .notes-app .sidebar .colors-input-list {
+      display: flex;
+      margin: 0;
+      margin-left: 1em;
+      gap: 10px;
+    }
+  
+    .notes-app .sidebar .colors-input-list > div {
+      margin: 0;
+    }
+  }
+  
